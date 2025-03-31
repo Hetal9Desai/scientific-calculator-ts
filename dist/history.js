@@ -8,12 +8,5 @@ export const CalcHistory = (function () {
         history.push(entry);
         localStorage.setItem("calcHistory", JSON.stringify(history));
     }
-    function get() {
-        return [...history];
-    }
-    function clear() {
-        history = [];
-        localStorage.removeItem("calcHistory");
-    }
-    return { save, get, clear };
+    return { save };
 })();
