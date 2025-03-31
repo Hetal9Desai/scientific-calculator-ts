@@ -1,8 +1,10 @@
 export const CalcHistory = (function () {
-  let history: any[] = JSON.parse(localStorage.getItem("calcHistory") || "[]");
+  let history: unknown[] = JSON.parse(
+    localStorage.getItem("calcHistory") || "[]"
+  );
   const maxSize: number = 15;
 
-  function save(entry: any): void {
+  function save(entry: unknown): void {
     if (history.length >= maxSize) {
       history.shift();
     }
@@ -10,14 +12,5 @@ export const CalcHistory = (function () {
     localStorage.setItem("calcHistory", JSON.stringify(history));
   }
 
-  function get(): any[] {
-    return [...history];
-  }
-
-  function clear(): void {
-    history = [];
-    localStorage.removeItem("calcHistory");
-  }
-
-  return { save, get, clear };
+  return { save };
 })();
