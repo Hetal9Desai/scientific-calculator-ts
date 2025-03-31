@@ -70,4 +70,4 @@ Link : "https://symbl.cc/en/unicode-table/"
 - View **Calculation History** if enabled.
 - Toggle **Light/Dark Mode** for better visibility.
 
-Link:
+Link:https://aquamarine-marigold-43e1e3.netlify.app/index.html
